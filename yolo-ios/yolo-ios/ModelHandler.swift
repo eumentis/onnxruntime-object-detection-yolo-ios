@@ -152,10 +152,6 @@ class ModelHandler: NSObject {
         
         let width = Int(buffer.width)
         
-        var r = [UInt8]()
-        var g = [UInt8]()
-        var b = [UInt8]()
-        
         let bufData = buffer.data.assumingMemoryBound(to: UInt8.self)
         for i in 0..<height {
             
@@ -168,10 +164,6 @@ class ModelHandler: NSObject {
                 let red = bufData[pixelOffset]
                 let green = bufData[pixelOffset + 1]
                 let blue = bufData[pixelOffset + 2]
-                
-                r.append(red)
-                g.append(green)
-                b.append(blue)
                 
             }
         }
